@@ -6,7 +6,7 @@ import 'remixicon/fonts/remixicon.css'
 
 function App() {
 
-  let [showContent, setShowContent] = useState(false)
+  let [showContent, setShowContent] = useState(false);
 
   // GSAP landing page animation
   useGSAP(()=>{
@@ -39,6 +39,54 @@ function App() {
 
   //Selfie effect
   useGSAP(()=>{
+
+    if(!showContent) return; 
+
+    gsap.to(".main",{
+      scale: 1,
+      rotate: 0,
+      duration: 2,
+      delay:"-1",
+      ease : "Expo.easeInOut",
+
+    });
+
+    gsap.to(".sky",{
+      scale: 1.1,
+      rotate: 0,
+      duration: 2,
+      delay:"-.8",
+      ease : "Expo.easeInOut",
+
+    })
+
+     gsap.to(".bcg",{
+      scale: 1.1,
+      rotate: 0,
+      duration: 2,
+      delay:"-.8",
+      ease : "Expo.easeInOut",
+
+    })
+
+    gsap.to(".girl",{
+      scale: 1,
+      bottom: "-55%",
+      x: "-50%",
+      rotate: 0,
+      duration: 2,
+      delay:"-.8",
+      ease : "Expo.easeInOut",
+    })
+
+     gsap.to(".text",{
+      scale: 1,
+      rotate: 0,
+      duration: 2,
+      delay:"-.8",
+      ease : "Expo.easeInOut",
+    })
+
     const main=document.querySelector(".main");
 
     main?.addEventListener("mousemove", function(e){
@@ -92,9 +140,9 @@ function App() {
 
       {showContent && 
 
-      <div className='main w-full '>
+      <div className='main w-full rotate-[-10deg] scale-[1.7]'>
         {/* Landing page start*/}
-        <div className='landing w-full h-screen bg-black'>
+        <div className='landing overflow-hidden relative w-full h-screen bg-black'>
 
           {/*Navbar*/}
           <div className="navbar pl-10 absolute top-0 left-0 z-[10] w-full py-10 px-1">
@@ -110,28 +158,29 @@ function App() {
 
           {/*Images8*/}
           <div className='relative overflow-hidden imageDiv w-full h-screen'>
-            <img className="sky scale-[1.3] absolute top-0 left-0 w-full h-full object-cover" src="./sky.png" alt="" />
-            <img className="bcg scale-[1.1] absolute top-0 left-0 w-full h-full object-cover" src="./bg.png" alt="" />
-            <div className="text text-white flex flex-col gap-10 absolute top-10 left-1/2 -translate-x-1/2">
+            <img className="sky scale-[1.5] rotate-[-20deg] absolute top-0 left-0 w-full h-full object-cover" src="./sky.png" alt="" />
+            <img className="bcg scale-[1.8] rotate-[-5deg] absolute top-0 left-0 w-full h-full object-cover" src="./bg.png" alt="" />
+            <div className="text scale-[1.4] rotate-[-10deg] text-white flex flex-col gap-10 absolute top-10 left-1/2 -translate-x-1/2">
               <h1  className='text-[12rem] leading-none -ml-40'>grand</h1>
               <h1 className='text-[12rem] leading-none -ml-20'>theft</h1>
               <h1 className='text-[12rem] leading-none -ml-40'>auto</h1>
             </div>
-            <img className="girl absolute bottom-[-55%] left-1/2 -translate-x-1/2 scale[1.4]" src="./girlbg.png" alt="" />
+            <img className="girl scale-[2.5] rotate-[-15deg] absolute bottom-[-160%] left-1/2 -translate-x-1/2 " src="./girlbg.png" alt="" />
           </div>
 
           {/*Bottom*/}
-          <div className="btmbar text-white absolute bottom-0 left-0 w-full py-15 px-10 bg-gradient-to-t from-black to-transparent">
+          <div className="btmbar text-white absolute bottom-0 left-0 w-full py-10 px-10 bg-gradient-to-t from-black to-transparent">
             <div className=' items-center flex gap-4'>
               <i className="text-4xl ri-arrow-down-long-line"></i>
-              <h3 className="text-xxl font-[Helvitica_Now_Display]">Scroll Down</h3>
+              <h3 className="scr text-xxl font-[Helvitica_Now_Display]">Scroll Down</h3>
             </div>
             <img className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[65px]" src="./ps5.png" alt="" />
           </div>
           
-        </div>
+          </div>
           {/* Landing page end*/}
 
+           {/* next page */}
           <div className='w-full flex items-center justify-center overflow-hidden  bg-black h-screen'>
               <div className="contr w-full h-[80%] text-white flex">
               <div className='relative limg w-1/2 h-full'>
@@ -141,9 +190,9 @@ function App() {
                 <h1 className='text-8xl'>Still Coming</h1>
                 <h1 className='text-8xl'>Not Hunting</h1>
 
-                <p className='mt-10 text-xl font-[Helvetica_Now_Display]'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas nisi, officia iusto modi, distinctio necessitatibus, quae tenetur dolorum nemo odit a alias totam!</p>
-                <p className='mt-3  text-xl font-[Helvetica_Now_Display]'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis quia delectus cum laboriosam!</p>
-              <button className='bg-yellow-500 px-8 py-6 mt-10  text-2xl  text-black'>Download Now</button>
+                <p className='pr mt-10 text-xl font-[Helvetica_Now_Display]'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas nisi, officia iusto modi, distinctio necessitatibus, quae tenetur dolorum nemo odit a alias totam!</p>
+                <p className='pr mt-3  text-xl font-[Helvetica_Now_Display]'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis quia delectus cum laboriosam!</p>
+              <button className=' bg-yellow-500 px-8 py-6 mt-10  text-2xl  text-black'>Download Now</button>
               </div>
               </div>
           </div>
