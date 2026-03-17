@@ -78,12 +78,18 @@ function App() {
               <h3 className='text-4xl mt-[-9px] leading-none bold text-white'>Rockstar</h3>
             </div>
           </div>
+          
           <div className='relative overflow-hidden imageDiv w-full h-screen'>
             <img className="absolute top-0 left-0 w-full h-full object-cover" src="./sky.png" alt="" />
             <img className="absolute top-0 left-0 w-full h-full object-cover" src="./bg.png" alt="" />
-            <img className="absolute bottm-[25%] left-1/2 -translate-x-1/2 scale[1.4]" src="./girlbg.png" alt="" />
+            <div className="text text-white flex flex-col gap-10 absolute top-10 left-1/2 -translate-x-1/2">
+              <h1  className='text-[12rem] leading-none -ml-40'>grand</h1>
+              <h1 className='text-[12rem] leading-none -ml-20'>theft</h1>
+              <h1 className='text-[12rem] leading-none -ml-40'>auto</h1>
+            </div>
+            <img className="absolute bottom-[-55%] left-1/2 -translate-x-1/2 scale[1.4]" src="./girlbg.png" alt="" />
           </div>
-          <div className="btmbar text-white absolute bottom-0 left-0 w-full py-10 px-10 bg-gradient-to-t from-black to-transparent">
+          <div className="btmbar text-white absolute bottom-0 left-0 w-full py-15 px-10 bg-gradient-to-t from-black to-transparent">
             <div className=' items-center flex gap-4'>
               <i class="text-4xl ri-arrow-down-long-line"></i>
               <h3 className="text-xxl font-[Helvitica_Now_Display]">Scroll Down</h3>
