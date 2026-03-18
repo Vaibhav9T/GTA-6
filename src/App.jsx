@@ -92,7 +92,7 @@ function App() {
     main?.addEventListener("mousemove", function(e){
       // console.log(e.clientX, e.clientY);
       const xMove= (e.clientX / window.innerWidth-.5)*40;
-      console.log(xMove);
+      // console.log(xMove);
       // const yMove= (e.clientY / window.innerHeight-.5)*40;
 
       gsap.to(".main .text", {
